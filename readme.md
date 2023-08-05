@@ -1,14 +1,14 @@
 # Velocity Derivatives from sim racing
-This was inspired by the StandUpMaths video on the same subject which can be found here: https://www.youtube.com/watch?v=sB2X5l5CsNs and works on the following basis
-![equation](https://latex.codecogs.com/svg.image?v=\frac{dx}{dt})
-![equation](https://latex.codecogs.com/svg.image?a=\dot{v}=\frac{dv}{dt}=\frac{d^2x}{dt^2})
-![equation](https://latex.codecogs.com/svg.image?\text{jerk}=j=\dot{a}=\frac{d^2v}{dt^2}=\frac{d^3x}{dt^3})
-![equation](https://latex.codecogs.com/svg.image?\text{snap}=s=\dot{j}=\frac{d^3v}{dt^3}=\frac{d^4x}{dt^4})
-![equation](https://latex.codecogs.com/svg.image?\text{crackle}=c=\dot{s}=\frac{d^4v}{dt^4}=\frac{d^5x}{dt^5})
-![equation](https://latex.codecogs.com/svg.image?\text{pop}=p=\dot{c}=\frac{d^5v}{dt^5}=\frac{d^6x}{dt^6})
-In practice, the data is discrete instead of continuous thus writing the derivatives as
-![equation](https://latex.codecogs.com/svg.image?\frac{dv}{dt}=\frac{v_2-v_1}{t_2-t_1}.)
-In Python, this translates to
+This was inspired by the StandUpMaths video on the same subject which can be found here: https://www.youtube.com/watch?v=sB2X5l5CsNs and works on the following basis  
+![equation](https://latex.codecogs.com/svg.image?v=\frac{dx}{dt})  
+![equation](https://latex.codecogs.com/svg.image?a=\dot{v}=\frac{dv}{dt}=\frac{d^2x}{dt^2})  
+![equation](https://latex.codecogs.com/svg.image?\text{jerk}=j=\dot{a}=\frac{d^2v}{dt^2}=\frac{d^3x}{dt^3})  
+![equation](https://latex.codecogs.com/svg.image?\text{snap}=s=\dot{j}=\frac{d^3v}{dt^3}=\frac{d^4x}{dt^4})  
+![equation](https://latex.codecogs.com/svg.image?\text{crackle}=c=\dot{s}=\frac{d^4v}{dt^4}=\frac{d^5x}{dt^5})  
+![equation](https://latex.codecogs.com/svg.image?\text{pop}=p=\dot{c}=\frac{d^5v}{dt^5}=\frac{d^6x}{dt^6})  
+In practice, the data is discrete instead of continuous thus writing the derivatives as  
+![equation](https://latex.codecogs.com/svg.image?\frac{dv}{dt}=\frac{v_2-v_1}{t_2-t_1}.)  
+In Python, this translates to  
 ```
 a = (v[i] - v[i-1])/(t[i] - t[i-1])
 ```
